@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <img class="navbar__logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
+        <div class="navbar__right">
+            <div class="search-box" id="search_box">
+                <svg class="search-icon" id="search_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" class="search-input" id="search_input" placeholder="Titles, people, genres">
+            </div>
+            <img class="navbar__avatar" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="User Avatar">
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <header class="banner" id="banner">
+        <div class="banner__contents">
+            <h1 class="banner__title" id="banner_title">Loading...</h1>
+            <div class="banner__buttons">
+                <button class="banner__button">Play</button>
+                <button class="banner__button">My List</button>
+            </div>
+            <p class="banner__description" id="banner_description"></p>
+        </div>
+        <div class="banner--fadeBottom"></div>
+    </header>
+
+    <!-- Rows will be injected here by JS -->
+    <main class="rows-container" id="rows_container">
+    </main>
+    
+    <!-- Search Results Container -->
+    <main class="search-results-container" id="search_results_container" style="display: none;">
+        <h2 class="search-results-title">Search Results</h2>
+        <div class="search-results-grid" id="search_results_grid"></div>
+    </main>
+    
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
